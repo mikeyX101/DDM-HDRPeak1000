@@ -2,10 +2,32 @@
 
     <PropertyGroup>
         <OutputType>Exe</OutputType>
-        <TargetFramework>net6.0</TargetFramework>
+        <TargetFramework>net6.0-windows</TargetFramework>
         <RootNamespace>DDM_HDRPeak1000</RootNamespace>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+        <LangVersion>10</LangVersion>
+        <IsPackable>false</IsPackable>
     </PropertyGroup>
+
+    <ItemGroup>
+      <Reference Include="DdmLibrary">
+        <HintPath>C:\Program Files\Dell\Dell Display Manager 2\DdmLibrary.dll</HintPath>
+      </Reference>
+      <Reference Include="WindowsBase">
+        <HintPath>C:\Program Files\dotnet\shared\Microsoft.WindowsDesktop.App\6.0.18\WindowsBase.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Update="setup.bat">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="CommandLineParser" Version="2.9.1" />
+    </ItemGroup>
 
 </Project>
