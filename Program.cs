@@ -87,7 +87,7 @@ internal static class Program
             int a = 0;
             int b = 0;
             bool result = ClassMonitorControllerBase.GetInstance().VcpSetCmd(monIndex, GetSetMode.Set, vcpType, ref a, ref b, vcpf4Value, 0);
-            Console.WriteLine("Waiting 5 seconds to wait for threads to finish...");
+            Console.WriteLine("Waiting 5 seconds for threads to finish...");
             Thread.Sleep(5000);
 
             if (!result)
